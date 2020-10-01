@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="Excel">
+    <output-path>$PROJECT_DIR$/out/artifacts/Excel</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/excelData/sample_file_1.csv" />
+      <element id="file-copy" path="$PROJECT_DIR$/excelData/sample_file_2.csv" />
+      <element id="file-copy" path="$PROJECT_DIR$/excelData/sample_file_3.csv" />
+    </root>
+  </artifact>
+</component>

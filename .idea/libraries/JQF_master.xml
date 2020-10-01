@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="JQF-master">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../JQF-master" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../JQF-master/JQF-master/examples/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../JQF-master/JQF-master/examples/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../JQF-master/JQF-master/fuzz/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../JQF-master/JQF-master/fuzz/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../JQF-master/JQF-master/instrument/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../JQF-master/JQF-master/maven-plugin/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

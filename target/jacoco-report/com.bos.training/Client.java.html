@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Client.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">csv-data-compare</a> &gt; <a href="index.source.html" class="el_package">com.bos.training</a> &gt; <span class="el_source">Client.java</span></div><h1>Client.java</h1><pre class="source lang-java linenums">package com.bos.training;
+
+
+// use to validate fields in files
+public class Client {
+
+    private  String customerId;
+    private  String accountNo;
+    private  String currency;
+    private  String accountType;
+    private  Integer balance;
+
+<span class="fc" id="L13">    public Client(String customerId, String accountNo, String currency, String accountType, Integer balance) {</span>
+<span class="fc" id="L14">        this.customerId = customerId;</span>
+<span class="fc" id="L15">        this.accountNo = accountNo;</span>
+<span class="fc" id="L16">        this.currency = currency;</span>
+<span class="fc" id="L17">        this.accountType = accountType;</span>
+<span class="fc" id="L18">        this.balance = balance;</span>
+<span class="fc" id="L19">    }</span>
+
+    public String getCustomerId(){
+<span class="nc" id="L22">        return  customerId;</span>
+    }
+
+    public void setCustomerId(String customerId) {
+<span class="nc" id="L26">        this.customerId = customerId;</span>
+<span class="nc" id="L27">    }</span>
+
+    public String getAccountNo(){
+<span class="nc" id="L30">        return  accountNo;</span>
+    }
+
+    public void setAccountNo(String accountNo) {
+<span class="nc" id="L34">        this.accountNo = accountNo;</span>
+<span class="nc" id="L35">    }</span>
+    public String getCurrency(){
+<span class="fc" id="L37">        return  currency;</span>
+    }
+
+    public void setCurrency(String currency) {
+<span class="nc" id="L41">        this.currency = currency;</span>
+<span class="nc" id="L42">    }</span>
+
+    public String getAccountType(){
+<span class="nc" id="L45">        return  accountType;</span>
+    }
+
+    public void setAccountType(String accountType) {
+<span class="nc" id="L49">        this.accountType = accountType;</span>
+<span class="nc" id="L50">    }</span>
+
+    public Integer getBalance(){
+<span class="nc" id="L53">        return  balance;</span>
+    }
+
+    public void setBalance(Integer balance) {
+<span class="nc" id="L57">        this.balance = balance;</span>
+<span class="nc" id="L58">    }</span>
+
+    @Override
+    public String toString(){
+<span class="fc" id="L62">        return &quot;&quot;+customerId+&quot;,&quot;+accountNo+&quot;,&quot;+currency+&quot;,&quot;+accountType+&quot;,&quot;+balance+&quot;&quot;;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CsvComparator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">csv-data-compare</a> &gt; <a href="index.source.html" class="el_package">com.bos.training</a> &gt; <span class="el_source">CsvComparator.java</span></div><h1>CsvComparator.java</h1><pre class="source lang-java linenums">package com.bos.training;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
+
+
+<span class="fc" id="L10">public class CsvComparator {</span>
+
+    // placing out so that we can run Junit on the csvComparator and scanCsv
+    // main do nth but call method
+    public static void main(String[] args) throws IOException {
+
+<span class="nc" id="L16">        String csvFile1 = &quot;excelData\\sample_file_1.csv&quot;;</span>
+<span class="nc" id="L17">        String csvFile2 = &quot;excelData\\sample_file_3.csv&quot;;</span>
+<span class="nc" id="L18">        String outputFile = &quot;output.csv&quot;;</span>
+
+        // hashmap to set key:: values
+<span class="nc" id="L21">        HashMap&lt;Integer, String&gt; list1 = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L22">        HashMap&lt;Integer, String&gt; list2 = new HashMap&lt;&gt;();</span>
+
+<span class="nc" id="L24">        ArrayList&lt;String&gt; columnsSelected = getUserInput();</span>
+
+        // storing of exceptions
+<span class="nc" id="L27">        ArrayList&lt;String&gt; exceptionList = new ArrayList&lt;String&gt;();</span>
+
+<span class="nc" id="L29">        scanCsv(csvFile1,list1,columnsSelected);</span>
+<span class="nc" id="L30">        scanCsv(csvFile2,list2,columnsSelected);</span>
+
+<span class="nc" id="L32">        csvComparator(list1,list2, exceptionList);</span>
+<span class="nc" id="L33">        writeCsv(exceptionList, outputFile);</span>
+<span class="nc" id="L34">    }</span>
+
+    public static ArrayList&lt;String&gt; getUserInput(){
+<span class="nc" id="L37">        Scanner input = new Scanner(System.in);</span>
+<span class="nc" id="L38">        System.out.println(&quot;Enter columns (AccountNo, Currency, AccountType, Balance, All) to compare: &quot;);</span>
+<span class="nc" id="L39">        String userInputs = input.nextLine().toLowerCase().replaceAll(&quot;\\s+&quot;,&quot;&quot;);</span>
+<span class="nc" id="L40">        input.close();</span>
+<span class="nc" id="L41">        ArrayList&lt;String&gt; columnsSelected = new ArrayList&lt;String&gt;(Arrays.asList(userInputs.split(&quot;,&quot;)));</span>
+<span class="nc" id="L42">        validateUserInput(columnsSelected);</span>
+<span class="nc" id="L43">        return columnsSelected;</span>
+    }
+
+    public static void validateUserInput(ArrayList&lt;String&gt; columnsSelected) throws InputMismatchException {
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        for (int i=0; i&lt;columnsSelected.size(); i++) {</span>
+<span class="fc" id="L48">            String columnName = columnsSelected.get(i);</span>
+<span class="pc bpc" id="L49" title="5 of 10 branches missed.">            if (!columnName.equals(&quot;accountno&quot;) &amp;&amp; !columnName.equals(&quot;currency&quot;) &amp;&amp; !columnName.equals(&quot;accounttype&quot;) &amp;&amp; !columnName.equals(&quot;balance&quot;) &amp;&amp; !columnName.equals(&quot;all&quot;)) {</span>
+<span class="fc" id="L50">                throw new InputMismatchException();</span>
+            }
+        }
+<span class="nc" id="L53">    }</span>
+
+    public static String userInputs(ArrayList&lt;String&gt; columnsSelected, String customerId, String accountNo, String currency, String accountType, Integer balance) throws IOException {
+
+<span class="fc" id="L57">        String columnsIdentified = &quot;&quot;+customerId+&quot;&quot;;</span>
+
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if(columnsSelected.contains(&quot;accountno&quot;)){</span>
+<span class="fc" id="L60">         columnsIdentified = columnsIdentified + &quot;,&quot;+accountNo+&quot;&quot;;</span>
+
+        }
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if(columnsSelected.contains(&quot;currency&quot;)){</span>
+<span class="fc" id="L64">            columnsIdentified = columnsIdentified + &quot;,&quot;+currency+&quot;&quot;;</span>
+        }
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if(columnsSelected.contains(&quot;accounttype&quot;)){</span>
+<span class="fc" id="L67">            columnsIdentified = columnsIdentified + &quot;,&quot;+accountType+&quot;&quot;;</span>
+        }
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if(columnsSelected.contains(&quot;balance&quot;)){</span>
+<span class="fc" id="L70">            columnsIdentified = columnsIdentified + &quot;,&quot;+balance+&quot;&quot;;</span>
+        }
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        if(columnsSelected.contains(&quot;all&quot;)){</span>
+<span class="fc" id="L73">            columnsIdentified = String.valueOf(new Client(customerId,accountNo,currency,accountType,balance));</span>
+        }
+
+<span class="fc" id="L76">        return columnsIdentified;</span>
+
+    }
+
+    //method to scan file
+    public static void scanCsv(String csvFile, HashMap&lt;Integer, String&gt; list,ArrayList&lt;String&gt; columnsSelected ) throws IOException {
+
+<span class="fc" id="L83">        String line = &quot;&quot;;</span>
+<span class="fc" id="L84">        String cvsSplitBy = &quot;,&quot;;</span>
+
+<span class="fc" id="L86">        File file = new File(csvFile);</span>
+<span class="fc" id="L87">        String fileType = getFileExtension(file);</span>
+
+<span class="fc bfc" id="L89" title="All 2 branches covered.">        if (!fileType.equals(&quot;csv&quot;)) {</span>
+<span class="fc" id="L90">            throw new IOException(&quot;Invalid File Type: Only .csv file accepted&quot;);}</span>
+
+
+
+<span class="fc" id="L94">        try (Scanner sc = new Scanner(file)) {</span>
+<span class="fc" id="L95">            sc.nextLine();</span>
+<span class="fc bfc" id="L96" title="All 2 branches covered.">            while (sc.hasNext()) {</span>
+<span class="fc" id="L97">                line = sc.next();</span>
+                // use comma as separator
+<span class="fc" id="L99">                String[] client = line.replaceAll(&quot;\&quot;&quot;, &quot;&quot;).split(cvsSplitBy);</span>
+                // set primary key integer to allow sorting according to id number
+<span class="fc" id="L101">                int primaryKey = Integer.parseInt(client[0].replaceAll(&quot;ID&quot;,&quot;&quot;));</span>
+<span class="fc" id="L102">                int columnSize = client.length;</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">                if (columnSize == 5) {</span>
+                // validate type
+<span class="fc" id="L105">                String customerId = client[0];</span>
+<span class="fc" id="L106">                String accountNo = validateAccount(client[1], file);</span>
+<span class="fc" id="L107">                String currency = client[2];</span>
+<span class="fc" id="L108">                String accountType = client[3];</span>
+<span class="fc" id="L109">                int balance = Integer.parseInt(client[4]);</span>
+
+                // place into hashmap for key:value
+<span class="fc" id="L112">                    list.put(primaryKey,  userInputs(columnsSelected,customerId, accountNo, currency, accountType,balance));</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">                } else if (columnSize &lt; 5){</span>
+<span class="fc" id="L114">                    throw new IOException(&quot;Invalid File: Missing columns found in &quot;+file+&quot;&quot;);</span>
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">                } else if (columnSize &gt; 5){</span>
+<span class="fc" id="L116">                    throw new IOException(&quot;Invalid File: Additional columns found in &quot;+file+&quot;&quot;);</span>
+                }
+
+
+<span class="fc" id="L120">            }</span>
+<span class="fc" id="L121">            sc.close();</span>
+<span class="fc" id="L122">        } catch (FileNotFoundException e) {</span>
+<span class="fc" id="L123">            System.out.println(&quot;Error: Could not find file.&quot;);</span>
+<span class="fc" id="L124">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L125">            throw e;</span>
+<span class="fc" id="L126">        }</span>
+<span class="fc" id="L127">    }</span>
+
+    public static String validateAccount(String account, File file) throws IOException {
+<span class="fc" id="L130">        String accountNumber = account.replaceAll(&quot;BOS&quot;,&quot;&quot;);</span>
+<span class="fc" id="L131">        int accountNum = Integer.parseInt(accountNumber);</span>
+<span class="pc bpc" id="L132" title="1 of 6 branches missed.">        if(accountNumber.length() &gt; 9 | accountNumber.length() &lt; 5) {</span>
+<span class="fc" id="L133">            throw new IOException(&quot;Invalid Account Number: BOS&quot;+accountNum+&quot; found in &quot;+file+&quot;. Required min of 5 digit and max of 9 digit&quot;);</span>
+<span class="fc" id="L134">        } else return account;</span>
+    }
+
+    public void validateAccType(HashMap&lt;Integer, Client&gt; list1, ArrayList&lt;String&gt; validAccountTypeList) throws IOException {
+
+<span class="fc" id="L139">        String[] inputAccType = new String[list1.size()];</span>
+
+<span class="fc bfc" id="L141" title="All 2 branches covered.">        for (int i = 0; i &lt; list1.size(); i++) {</span>
+<span class="fc" id="L142">            inputAccType[i] = list1.get(i + 1).getCurrency();</span>
+        }
+
+<span class="pc bpc" id="L145" title="1 of 2 branches missed.">        for (int i = 0; i &lt; inputAccType.length; i++) {</span>
+<span class="pc bpc" id="L146" title="1 of 2 branches missed.">            if (!validAccountTypeList.contains(inputAccType[i])) {</span>
+<span class="fc" id="L147">                throw new IOException(&quot;Invalid Account Type: &quot; + inputAccType[i] + &quot; found in row index &quot; + i + &quot;. Account type should only be 'SAVINGS' or 'CURRENT'.&quot;);</span>
+            }
+        }
+<span class="nc" id="L150">    }</span>
+
+    public void validateCurrency(HashMap&lt;Integer, Client&gt; list1, ArrayList&lt;String&gt; validCurrencyList) throws IOException{
+<span class="fc" id="L153">        String[] inputCurrencyList = new String[list1.size()];</span>
+
+<span class="fc bfc" id="L155" title="All 2 branches covered.">        for (int i=0; i&lt;list1.size();i++) {</span>
+<span class="fc" id="L156">            inputCurrencyList[i] = list1.get(i+1).getCurrency();</span>
+        }
+
+<span class="pc bpc" id="L159" title="1 of 2 branches missed.">        for(int i=0; i&lt;inputCurrencyList.length; i++) {</span>
+<span class="pc bpc" id="L160" title="1 of 2 branches missed.">            if (!validCurrencyList.contains(inputCurrencyList[i])) {</span>
+<span class="fc" id="L161">                throw new IOException(&quot;Invalid Account Type: &quot; + inputCurrencyList[i] + &quot; found in row index &quot; + i + &quot;.&quot;);</span>
+            }
+        }
+<span class="nc" id="L164">    }</span>
+
+    public static void csvComparator(HashMap&lt;Integer, String&gt; list1, HashMap&lt;Integer, String&gt; list2, ArrayList&lt;String&gt; exceptionList) throws IOException {
+
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        for (Integer i: list1.keySet()){</span>
+<span class="pc bpc" id="L169" title="1 of 2 branches missed.">            if (!String.valueOf(list1.get(i)).equals(String.valueOf(list2.get(i)))){</span>
+<span class="fc" id="L170">                exceptionList.add(String.valueOf(list1.get(i)));</span>
+<span class="fc" id="L171">                exceptionList.add(String.valueOf(list2.get(i)));</span>
+            }
+<span class="fc" id="L173">        }</span>
+<span class="fc" id="L174">    }</span>
+
+    public static void writeCsv(ArrayList&lt;String&gt; exceptionList, String outputFile) throws IOException {
+
+<span class="fc" id="L178">        PrintWriter writer  = null;</span>
+
+<span class="fc" id="L180">        try {writer = new PrintWriter(new File(outputFile));</span>
+<span class="fc" id="L181">            System.out.println(&quot;output.csv created&quot;);</span>
+<span class="nc" id="L182">        } catch (Exception e) {</span>
+<span class="nc" id="L183">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L184">        }</span>
+
+        //write contents of exceptionList into &quot;output.csv&quot;
+<span class="fc bfc" id="L187" title="All 2 branches covered.">        for (String str : exceptionList)</span>
+        {
+            // To check what is printed to the output file:
+<span class="fc" id="L190">            System.out.println(str);</span>
+
+            //writing each line of the exceptionList to the output file
+<span class="fc" id="L193">            writer.write(str);</span>
+<span class="fc" id="L194">            writer.write(&quot;\n&quot;);</span>
+<span class="fc" id="L195">        }</span>
+
+        //close the scanners
+<span class="fc" id="L198">        writer.close();</span>
+
+<span class="fc" id="L200">    }</span>
+
+    private static String getFileExtension(File file) {
+<span class="fc" id="L203">        String fileName = file.getName();</span>
+<span class="pc bpc" id="L204" title="2 of 4 branches missed.">        if(fileName.lastIndexOf(&quot;.&quot;) != -1 &amp;&amp; fileName.lastIndexOf(&quot;.&quot;) != 0)</span>
+<span class="fc" id="L205">            return fileName.substring(fileName.lastIndexOf(&quot;.&quot;)+1);</span>
+<span class="nc" id="L206">        else return &quot;&quot;;</span>
+    }
+
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

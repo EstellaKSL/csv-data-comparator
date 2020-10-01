@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="FileNotFoundTest" time="0.005" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\test-classes;C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\classes;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-fuzz\1.3\jqf-fuzz-1.3.jar;C:\Users\cliff\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\cliff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-generators\0.8\junit-quickcheck-generators-0.8.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-core\0.8\junit-quickcheck-core-0.8.jar;C:\Users\cliff\.m2\repository\org\javaruntype\javaruntype\1.3\javaruntype-1.3.jar;C:\Users\cliff\.m2\repository\org\antlr\antlr-runtime\3.1.2\antlr-runtime-3.1.2.jar;C:\Users\cliff\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar;C:\Users\cliff\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\cliff\.m2\repository\ru\vyarus\generics-resolver\2.0.1\generics-resolver-2.0.1.jar;C:\Users\cliff\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-instrument\1.3\jqf-instrument-1.3.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm\6.2.1\asm-6.2.1.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.report\0.8.2\org.jacoco.report-0.8.2.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.core\0.8.2\org.jacoco.core-0.8.2.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-commons\6.2.1\asm-commons-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-analysis\6.2.1\asm-analysis-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-tree\6.2.1\asm-tree-6.2.1.jar;C:\Users\cliff\.m2\repository\info\picocli\picocli\4.0.4\picocli-4.0.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="SG"/>
+    <property name="sun.boot.library.path" value="C:\Users\cliff\.jdks\openjdk-14.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\cliff\AppData\Local\Temp\surefire12252559846696550577\surefirebooter18274894724880257530.jar C:\Users\cliff\AppData\Local\Temp\surefire12252559846696550577 2020-08-26T11-43-21_509-jvmRun1 surefire6957829859290965455tmp surefire_014950012578932444217tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\test-classes;C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\classes;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-fuzz\1.3\jqf-fuzz-1.3.jar;C:\Users\cliff\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\cliff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-generators\0.8\junit-quickcheck-generators-0.8.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-core\0.8\junit-quickcheck-core-0.8.jar;C:\Users\cliff\.m2\repository\org\javaruntype\javaruntype\1.3\javaruntype-1.3.jar;C:\Users\cliff\.m2\repository\org\antlr\antlr-runtime\3.1.2\antlr-runtime-3.1.2.jar;C:\Users\cliff\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar;C:\Users\cliff\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\cliff\.m2\repository\ru\vyarus\generics-resolver\2.0.1\generics-resolver-2.0.1.jar;C:\Users\cliff\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-instrument\1.3\jqf-instrument-1.3.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm\6.2.1\asm-6.2.1.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.report\0.8.2\org.jacoco.report-0.8.2.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.core\0.8.2\org.jacoco.core-0.8.2.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-commons\6.2.1\asm-commons-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-analysis\6.2.1\asm-analysis-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-tree\6.2.1\asm-tree-6.2.1.jar;C:\Users\cliff\.m2\repository\info\picocli\picocli\4.0.4\picocli-4.0.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\cliff"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="C:\Users\cliff\.jdks\openjdk-14.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="idea.version2020.1.2" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\cliff\AppData\Local\Temp\surefire12252559846696550577\surefirebooter18274894724880257530.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="14.0.1+7"/>
+    <property name="user.name" value="cliff"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\cliff\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\cliff\AppData\Local\Temp\"/>
+    <property name="java.version" value="14.0.1"/>
+    <property name="user.dir" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\cliff\.jdks\openjdk-14.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\cliff\AppData\Local\Microsoft\WindowsApps;;C:\Users\cliff\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.1+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="whenFileNotFound" classname="FileNotFoundTest" time="0.002">
+    <system-out><![CDATA[Error: Could not find file.
+sample_file_not_found.csv (The system cannot find the file specified)
+]]></system-out>
+  </testcase>
+</testsuite>

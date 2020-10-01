@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="FuzzyTest" time="7.182" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\test-classes;C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\classes;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-fuzz\1.3\jqf-fuzz-1.3.jar;C:\Users\cliff\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\cliff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-generators\0.8\junit-quickcheck-generators-0.8.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-core\0.8\junit-quickcheck-core-0.8.jar;C:\Users\cliff\.m2\repository\org\javaruntype\javaruntype\1.3\javaruntype-1.3.jar;C:\Users\cliff\.m2\repository\org\antlr\antlr-runtime\3.1.2\antlr-runtime-3.1.2.jar;C:\Users\cliff\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar;C:\Users\cliff\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\cliff\.m2\repository\ru\vyarus\generics-resolver\2.0.1\generics-resolver-2.0.1.jar;C:\Users\cliff\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-instrument\1.3\jqf-instrument-1.3.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm\6.2.1\asm-6.2.1.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.report\0.8.2\org.jacoco.report-0.8.2.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.core\0.8.2\org.jacoco.core-0.8.2.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-commons\6.2.1\asm-commons-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-analysis\6.2.1\asm-analysis-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-tree\6.2.1\asm-tree-6.2.1.jar;C:\Users\cliff\.m2\repository\info\picocli\picocli\4.0.4\picocli-4.0.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Singapore"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="SG"/>
+    <property name="sun.boot.library.path" value="C:\Users\cliff\.jdks\openjdk-14.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\cliff\AppData\Local\Temp\surefire12252559846696550577\surefirebooter18274894724880257530.jar C:\Users\cliff\AppData\Local\Temp\surefire12252559846696550577 2020-08-26T11-43-21_509-jvmRun1 surefire6957829859290965455tmp surefire_014950012578932444217tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\test-classes;C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare\target\classes;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-fuzz\1.3\jqf-fuzz-1.3.jar;C:\Users\cliff\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\cliff\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-generators\0.8\junit-quickcheck-generators-0.8.jar;C:\Users\cliff\.m2\repository\com\pholser\junit-quickcheck-core\0.8\junit-quickcheck-core-0.8.jar;C:\Users\cliff\.m2\repository\org\javaruntype\javaruntype\1.3\javaruntype-1.3.jar;C:\Users\cliff\.m2\repository\org\antlr\antlr-runtime\3.1.2\antlr-runtime-3.1.2.jar;C:\Users\cliff\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar;C:\Users\cliff\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\cliff\.m2\repository\ru\vyarus\generics-resolver\2.0.1\generics-resolver-2.0.1.jar;C:\Users\cliff\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\cliff\.m2\repository\edu\berkeley\cs\jqf\jqf-instrument\1.3\jqf-instrument-1.3.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm\6.2.1\asm-6.2.1.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.report\0.8.2\org.jacoco.report-0.8.2.jar;C:\Users\cliff\.m2\repository\org\jacoco\org.jacoco.core\0.8.2\org.jacoco.core-0.8.2.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-commons\6.2.1\asm-commons-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-analysis\6.2.1\asm-analysis-6.2.1.jar;C:\Users\cliff\.m2\repository\org\ow2\asm\asm-tree\6.2.1\asm-tree-6.2.1.jar;C:\Users\cliff\.m2\repository\info\picocli\picocli\4.0.4\picocli-4.0.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\cliff"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="C:\Users\cliff\.jdks\openjdk-14.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="idea.version2020.1.2" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\cliff\AppData\Local\Temp\surefire12252559846696550577\surefirebooter18274894724880257530.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="14.0.1+7"/>
+    <property name="user.name" value="cliff"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\cliff\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\cliff\AppData\Local\Temp\"/>
+    <property name="java.version" value="14.0.1"/>
+    <property name="user.dir" value="C:\Users\cliff\Desktop\JavaAssignmentGit\final\csv-data-compare"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\cliff\.jdks\openjdk-14.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\cliff\AppData\Local\Microsoft\WindowsApps;;C:\Users\cliff\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.1+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="validateUserInput" classname="FuzzyTest" time="0.439">
+    <system-out><![CDATA[Invalid input: "[ꏌ㔢, 欽]"
+Invalid input: "[„, s¨îhY&amp#20;?&amp#23;¹&amp#8;|³Ù7Z¹ýâòZÖp!3Žo&amp#29;`, 3;Ù&amp#11;)x	\~&amp#18;ŒÞª&amp#2;&amp#23;f[¨ÎzêÑ&amp#7;Ë]"
+Invalid input: "[Œ~¨ÌxÝ}Ù&amp#22;&amp#24;ƒ$õKlÓ±&amp#24;Ø, :&amp#16;, ¸‡Õ, ᖲ燏ऒꐫ办橆纮, :lÊX, 풲䥗䥑貘櫁ꉉ롻ጀ祟흧갫ሻ굜, ß&amp#8;´ê, ä, 篌, 貇廔礩쫆휜, 蚛妓ᛦ⦚㝖, Ð£­, 㧨텑멛鵹ᮽ墷ࢲ川疁雤㭣༵姫ʒ蹇㻱ꃠ개ꢜ埑컺, &amp#1;Ãâ, 枒椶쀞脶闎ㅍ䩏⸴显꿽ױ蝻ᙠ顩蝻, 物ା竕뻧쮇ᯙ, 灻⊥䎠萏磦ܭ纕붠, ±â&amp#24;´9&amp#2;e3Å>-‘,ßÚÞDcî&amp#7;â, 뷵惺, 锵, 条, it½ ê¨0*<&amp#2;F, =•Æ`&amp#5;ëJ¨]"
+Invalid input: "[鈃捹ܕȨ䮛⚛㛔, , ᩤ叁톤☙礫끲꒎蕂㲋⾣诘嘎尺⎳稼Ꮥꢇ겴࿒켒爭脡蚈渮㗷获鉜箬袒嗯稸속簤꫑薭ꚳ㠑矺K៑頨毊ꗆ옌趚螃脼, M¼&amp#14;1, 랦珂靨봃䱈ꝲ⴮愇ᠱ㵣㐫ᛠ汢ᕰↁ莩㻰쒖үᢸ畟, 牞⫞章蔪筽耓䮌꘿츀繡˧㭄䩫걱唺鍂窐뵠ࠞ툷৲, 毸氥횷눦ʃ့勱쿶퀗楞&amp#11;⾋偲弉凸戯䜭挚ꡦ굪턅㏙ᠿ織䎾, 淪秢䦂, +àg&amp#3;QÇ&amp#8;s&amp#4;ßã_˜&amp#31;cª&amp#1;’^, ᶉ㳌㱙ꆇ뷡ᧆ쾄䥂꽥軽, 堘஻칇Ż䨩ꆰ㮮肉⎕ሿ꾖⦻㎫ل゙玆⥍赅ẑ颬弗ᛈ湲ᝰ䊣潻䝃 ᤢ긽డ੖呛, &amp#31;Ñ…â&amp#14;, 喁⁡懗⦊릕篎拡ᅰ, ޹䚆祷홛ֶ䒃䝅뮡, 藪顑轑椓ヱ䅿紉町阹捲潪໮⢫쫺㚭捏ᆗሚ, 暪뫻뫽贍ꣴ绅䃪㣴퉖␷鬤庆௖閠, †&amp#5;, ¢ÓƒŽ&amp#21;×, DYt¬î‹J;, 4î, Ⴚ]"
+Invalid input: "[ñ3ÖùYÞV&amp#23;Eá, K’ÄŒ<3&amp#2;­Q
+•«þ, Ô@.‡3&amp#6;s&amp#1;,¡%Å|…, 飖诪쎖, rÙïóÞ, 姜এ窿রࠢ럴앥秊킃齶ㅜ]"
+Invalid input: "[í&amp#31;&amp#16;õ¡ƒ, –A_úd¨ê\}ÌÌHzÇb…c?§&amp#12;¹<&amp#15;ì$, ⩦㫸錿佱鲧㿮졌䐂ꑘⲫ薎㋉⣋繞㦸᭳楨, rœp, Ĭ腻ⷎ묄ꚽ儿荵, t, í²m®<&amp#18;ü&amp#30;&amp#0;«:El„&amp#20;, dë, €½ˆBØ6ÈB, 蜩ꐢ铮ꨑⳠ]"
+Invalid input: "[þ=&amp#31;ïÕ&amp#23;¸U, §÷&amp#0;ê‘, ëò5, 㕳⟾ٿ볜摯헝叠鹧庅炭Ϙ榽㰃뵝湯䂿ᖉ㮕䰾灿莑ᛦ퓙齱⯵䜇긁쇁蓨冀굞疽, 䯰쳛疨, 埓, X5&amp#5;&amp#17;
+bä«e7&amp#19;þ@]"
+Invalid input: "[°í&amp#31;&amp#17;&amp#0;ºû×®+Ø&amp#28;²i®àý, 瀾뾏, 㞟砜, ῴ刄, &amp#31;„]"
+Invalid input: "[墨, ÇÐ, 㣛ꔒ棘ත쩃↗胺㥍వ䯧㔨쵏ྡྷ, [ÒaQÈKz0‚>Æ•²óî&amp#28;Y¨ÿyuíÓt‚&amp#1;&amp#26;ew‚ˆA…&amp#24;Mi, 얥逧쟭陕䩁洩큄寶ヮ㇟弴邊྆댶騱蹼䍔兞돿恑뿣羍, ÷y¦]"
+Invalid input: "[ã'M¡, ꧯ僤䏾㮺᛭牿幒匛覠덧쒋츆, G&amp#16;"ç×º&amp#18;ú&amp#3;Ÿ1, ¾&amp#15;d¨Ÿ¼HêÀ, 鳾슁, 䐼դ, 좥⋏䈾, 貛뿟庂త무쩲쪕흠᠕⢽䘄嵺, ºM, 7§&amp#22;çéR£“´¢îÞ3&amp#4;õI, ᩮ剏䛝뙭⥩郫쫦, ©L, ²ä&amp#5;%ÙwÅŸ¾&amp#11;i\_Ä, ᦳ๠, µ&amp#14;¦›‰K·, 爊娨Ϝ婯꘧곢, 输뙀魽䱥Ꮒ襱纸衙, ꪒ堝㍯㏦㘣뗰▋镒혠⨳呛膂畒땡艸䞯衺辰冓铠蜳㙿醠, 廮풪춷犒汾欮녇, c&amp#12;6ü&amp#28;<', 씏, 龒ꛊ䪟瀵쿴阍姡許Ꙅ覱낑ꂆと묵喡롪륢쀠묪瘶⻀+䣝捋飺ᢨ棘ꏍ灧〧ꈑ骶, 㪵㰎㆜኱麾뽀㊉뵊†⏳ࣜ懅㒸ᙓ呍瘐, 飍ꀫ໬, …0œBõÂñ&amp#25;, 칥㇨ᇖ亏잋踇, 増嘣䃕Ꜣ⠐䷋搥믎話]"
+Invalid input: "[ZCøÕ—7>šÝ9Oœy“&amp#25;\qW˜I, 䲣Ხ돷, &amp#25;Æ….p	&amp#3;B&amp#31;&amp#25;, 呠朱␽뙙癊专핞맵䳃Მ蘩]"
+Invalid input: "[úò&amp#4;ñúa&amp#27;"—…@ÀöÌŠZÕ>@ƒWÙÕ&amp#0;ì;&amp#19;&amp#27;åÓÏfÜ, Úëäþ³‹%, 蠍ϗ曳株쟴⻏傂⛌첍뚔ࡦ콝桫骆刂瑍ሁ䛯૰許擬崠죧㽙只ኰ覅萖攌碖봫殭ួ檧ව呓嫟㢔櫱, 뮸婒珞耆텴㌋ஂ⽤࿦碾큛, 몎ꅗ骦的㞀, 㙼㣻뉕፶聅ƍ⡋ᤃ欹輟, て沈貋, 鍳偲坦Ḥ溝牑⌽犲顩荷幘ῲ㹑暞⽏㦂粱, 쩟ফ삙龄, ࿐᎞敔ꡤ↬얪ⓘꯑ둉࿲生灭ꆶ, &amp#2;&amp#20;óˆõ, &amp#7;À#U, &amp#1;UŠ»^Û, 薲鑳, 屯던̩ᦥඖ᠅躋æ稲釮熆膓ᑘ⟪, 咞쵽芎仕迷क़, &amp#29;P]"
+Invalid input: "[횎, ♬噸馅㗐ڽꉀ汱ꌡ≬]"
+Invalid input: "[8&amp#31;üZêó&amp#27;‘Î¶ÛYã\&amp#0;8"Åß, 䌶⋈츬㌹]"
+Invalid input: "[仌멏䅞鸫㈞쌂, ‘, }Ýõ, °Ô&amp#15;NÉ‰°,M@Zï,U‘&amp#29;²X&amp#24;(äs, ⭀맩, 鱒펗, lÌÕ9°òjP©u…, láÊ„'5, &amp#14;Çª, ÝP, 㸣胷ꪩ胵⠜搠ꉺ搢졥⸕, 旪⦜ࡒ㿀㛣롅瞭蠗놐ᘡ䣶쑰釉ŧ惞锯厞脐䚭첉긕, ïü, vÚ, 甄涃뻘동䟁୫螆ꍇ, b*`&amp#23;É·ÿÉ—¢°&amp#23;Ô-~\]&amp#14;+Tè&amp#4;¡¤, ဉᇪ抟, ⢰ꪹ袁㺨瀜껨컼乤ꇸ灻땞䎩簢⓰延鯕ᔻ꒔ᔞ⚝髙ꅣ黔ʦⰀ뻫윶땤䧋, v]&amp#0;°Sy±²¾ÖBu, 㿖男ꗯ뗗皳鸖⼊僠㩒ꐢ桔ੀ, ½ë¶‘&amp#8;#‘D, 屺높, &amp#22;ªÿ»ÿß	&amp#1;c…çâÁúÞâþ&amp#15;&amp#23;&amp#8;t¯»¤´&amp#15;&amp#23;›¦[&amp#8;&amp#23;$, “ë&amp#24;­¨Ó…°Ñ—&amp#28;®qâ:, &amp#27;’J€K"y&amp#25;äˆ»&amp#28;, 끫㱎䧖⢑, q&amp#18;&amp#3;ó, Â†&amp#12;Æ‹&, 쒩웜櫟ꋀᖁ벃⩓ㅫ뺇Ȫ陎ꁬ⃷捙읆ꓰㄮ裹䉍冃ᚧᲆ猅䆸㹔쐺纫뚓ꋏ凍擻᥿鐄, £p]"
+Invalid input: "[忬⛝쪶লꏏ, 튣弑婆뙷䙀ḹ戈⃶恪햛肴쵍눶ꎪ㠁铠쯳, ÛðÑÏóg¨ãŽ, W&amp#3;&amp#28;, 㿈횴, Ò×ß	È¶Úü6¸¶v—üã’W&amp#4;Å´ß©¼®Õ, 佘㘏뒹씛뎟鿚鷨ꤷ芇Ϝ寜, Ꮭ譃ꄠ䦑⒣Ᏸ穏, X&amp#6;¦0
+', JÚi$¯/œ¨ä)‡ ’, 齤㸓뢵潈쥱鋰䷋꺣츥䮄⍬뤻繛, 껫鱣ࠞ௻瀍ꬼ뵴, à»), 醸憺얇⸮刊, ¡, |&amp#2;×¿, ƒj¢’ë¹4ÏÿËs[–Í]"
+Invalid input: "[䌉, U, <2ç&amp#4;+a•ò, ꤧ돗ⷈ樼恇軏獾䎖跴⑅่믝䴒䃾뇥, 䢦ᬸꨁ鹺녛촍, 쵗췈ܱ邋쭣䛶ΰ怔骖㜮Ꮍ, 偦誘캒䏗괋츍䒄ی刚쭮矊, [xƒõ&amp#12;åë²*\!>ä¦$ÉS—, ˜®õ|•«, ‹°éºöó§b, tŠ, 螓嫵樁圗⁙渿䘞쉶⎊, 엄ک, &…s˜¾’Ó©1qD§°9wDWQ³z, ³]ÿ7»êù, F5‚&amp#1;&amp#28;…@&amp#0;2(yP}“ãÒ‘&amp#30;ú&amp#21;&amp#22;ÇYN, #S#, &amp#31;¥ñ\&amp#0;†½&amp#29;$›&amp#27;BÌ, 㚹愴왍㨘㥅뇔頎耎㬭살譟, &amp#28;&amp#30;AÂ, lúZ=“Ð=i&amp#12;&amp#2;ýn@•&amp#29;, 9¼¥À, ±ã&amp#18; ‡Ò”ý¸›&amp#26;]hR8, àúå¹Ãµ&amp#8;j, ø&amp#7;ÄÖ*Ë]"
+Invalid input: "[4þ&amp#15;ÚÕÓ>_Ùp©Œ, &amp#4;ó, ๔듅៬漷历콏౲犏, R&amp#0;«Œ{¾, ñ&amp#2;
+2Ç&amp#6;®:J&amp#25;*×ƒÝ&amp#4;ë;-&amp#7;, ø&amp#30;{, ‘&amp#31;þ	~‡íYk&amp#28;„, 鱵쩯ᇜ䃇䳑ರ렽剓ሸ学狮뎭]"
+Invalid input: "[âtùÅ3ˆC&amp#16;¦Êˆ4, 該맧猔勺팖푍৆ީ።䡃鷊, ܗ烸⪖ם盿읷踷, &F«Ý°2ë, ⧇윳챺೛烖윥ต熈噖]"
+Invalid input: "[G&amp#28;Ä¼, gö$vÕ!Æú†Æÿü}l, ⥐㑪㺸⋆禄捭, 锷驃㟠, DˆºY%, ä&amp#11;!¡eÍïÒÛd	" 8½õ†, &amp#3;p, 奾嬘芲봟ඏ窇, 濚䲳緂侬㙊옄钬꘱錃꜑, Œ, 隸굻 幍鿷⾦䷭䶙㒇࿋Ṳ巏孒䅺䘣孄㺦, P, æ_
+ËjD>fëß&amp#22;1ü&amp#4;, $‘¤¥A	uÒ¶9Åÿêd? , 섏᷌鏠⯺㎶䆈䐧, 火⃯䶺㹗ẞ뚡㌛鹈䋎, 첖綜, {0&amp#28;-&amp#7;l?·, ‘, 刔ߌ솚դ采题ꕼ㽧沝]"
+Invalid input: "[捾縒ჭ녽䙵斔퀇㴝捡찇앫ೄ֚⎝厎࡛흛䎢퍊卣׎ࣨὝ, ꈫ뛜䰒]"
+Invalid input: "[ÐùÂª&amp#8;8D, ᓳ饗譱鵠Ꮼꂵ, 똙菿툒⁧맩谍xʫ, ¦, ⼧ᰲ흞⑋땆덳椩ݍ¥苇읳懞嘵硊, !_ŸÍ, ´^½àÀ€Û, 㭔祅櫗芤ැ簀즭炿筌닳쇟, ꈛ쵽죟朾, µ3E¤A`&amp#7;.Q^¤¬× ¹UIë&amp#2;!àÌ&amp#20;¥&amp#8;, ‹	ñ§, %gÂe, 巀渤䜲㝀퇳싼쳶뱰ℐ켔㜡霓곮旄䌲턁Ṍꦌ, 롵탼拻쇣₏笅, ÷}Z>¸&amp#29;, 貐䘁␂]"
+Invalid input: "[/D;_4Y, 爗⋣殷諊࢐啤뒇퓤ᰆ悋㡛]"
+Invalid input: "[&amp#5;’š, &amp#14;,9é²FÊ¶Á´ÂÊ">úÙ, &amp#21;íG&amp#20;Û, _E&amp#17;ðž³~h×, 嗊놔䦙햒, 횤ㅘ甩ዳ⫨닞莟᝔怂⬎炈㮑㘮㐇, 9¨ª¬c­0ÌB5¿Ãç#, [<T6Þ‰²1š‰af(º, èç&amp#0;\)~h&amp#11;ù”ªÞ#$ðØõ¬Þü£, —]&amp#23;ÓœrÒQ, •, ­4ñº&amp#3;"<&amp#6;àU?§ÖzU0å‘¹šN&amp#7;]"
+Invalid input: "[䣩苾䔺, ’Û¸ù/, ÙÝðg’û“XÓˆó/&amp#0;³b_, #&amp#20;]"ìé&amp#14;Ä©ÿ, &amp#28;ÜL“:Xú½XkoÉ&amp#14;, 븈, ¦&amp#7;ÛÜ!, ^&amp#11;, ‰×»yPŠ[ÓL&amp#6;‡pÈ, 穥ഫ៾᪝앸殠洫炪㰀ꂦ, ¼, ª¯\ &amp#26;UU³MÐ¦xá, ?ÐòqøiÞ|QZÉÛ8\r(+Û, %, 3, Ÿ`qBÞ, Ô
+PŸ+¥&amp#6;NPšð¼Æ, cöýBAˆG[&amp#22;[¸3á, 걶妙, 阪, 6利렡ㅂඓ倡괛]"
+Invalid input: "[ᢟ栐뱠瘞₏⾡Ⅽ, 㥡峯ꄯ俞쭟]"
+Invalid input: "[3Ÿ8]"
+Invalid input: "[ꆨ蘪, ç&amp#0;ýŸÜìÜ³¦k¼Zh8, Ißˆ;&amp#29;°6{6Çv&amp#0;Ãæ¹ã, 奰㭍䤦躦찳֡砹敆䧸ᨰ鷔跆]"
+Invalid input: "[L&amp#18;š²g, ëÑ‚,  ´, Ü¥Òzù(,=œ, äqn9“, 朷ⵛ௩秜]"
+Invalid input: "[‰ÙrW&amp#19;Ï, 䄨, 悆ꈫ庄㖴藑䐍ቌ訝ᭁ뺾朜ᶵἶ阵㟖, 瑓⣃㯢ꇦ婟닫짞콅폶超瞕⑔, 䐂䇖櫢⯍쥃憍翞˅䵹䧯쪱㓻紆Ἲꬸ舱˃鍰ܻႫ嫯解ၨ嘛氌閾ꀈ耊괪暰鿰ㄨᢸꇄᵇ肧콫츕쎗⛰蟭騿膼혫麑㊺䖋斷瘄ᯒ㹎㲍⨄鏵䄩䖒㖳Ĕ, C
+&amp#17;]"
+Invalid input: "[鰏ꖮ䳭酝Ꝭ荛䈂弄ꧠ, ᎆ챋玲, 뻦ꪓ]"
+Invalid input: "[䄀寞슌双Ꜭꀅ砟禶ౘꅙ奶뻁㩓튣鐎୔凬荩㌏, ట蓎峄줨蕁薾燵狙푿, &amp#6;€ûÕ, ꛈꏼ鞸劇, ¨÷Dj&amp#8;{&amp#15;×y]"
+Invalid input: "[쨰殂绮啴봋ᑠ㧙쨽寛퇗瓒塾⫒溃男➂ⵢ㚆闻씩㗰, êlbŽð&amp#18;Þy~A7« }×¹Õs±‚, ೏告ꮋ鏻㪩, Œv‚ª&amp#23;¹®õ&amp#2;, ¦0ÒÜzQ;§CÈ, 㗑ꎬ휀ŋ헷Ƣ茞슎嫥㭡㚸浄Տ挕ẋ靔㉃兠╓, §&amp#0;&amp#21;&amp#11;d‹ªá, òZz'èhÔö&amp#18;ol<, 슼캉䙳ꞽ, Nlc¢, 丼㚄Ḗ䩣饹駱ᷬꜲݳ阄׭훷™᳒, 䕵证烾䂭뗒䱴滀柉삾모, ^És{¼]"
+Invalid input: "[,/–!ƒÊ&amp#14;Q—n&amp#30;è, dÙST”Ò, 뫬매⨷ฏ덦敵숗猕㾌脎俽윃瓫ᲆꥡ沍ᾘ㝩꾕銀๔⼛Ƞ꧘䦫䅤蟫䘿⯦鹧ꐛ]"
+Invalid input: "[컱, 匲뫁互得꣇揞働, 疔ࠗ恌⼥, ¹Š“¾, 柩쾑䡠護, 䝚ᖈ, Ă櫕瓘庈➖炛쒉ӄ쎦傡䞿슢閑ꥐ⁂䩇, `ÁS|û„, &amp#25;ª3œt6, ë&amp#25;·, 赫緆ῃ⏥顋늺䏴ਆᤳ궿퓷ㅘᥙ㽹퀅雞᩷국嫟晉㏣Ⴘ㦩祿◆ߞ⥾幁쀹➂㺴갱㞆⫵, Â·Ý&amp#8;&amp#17;ò&amp#11;w&amp#18;'àÕv¹ ¯, ÷L&amp#19;"&amp#3;, w, 蟟쀼첣騢옔煽廘䶩짨㵷ᐥ㓏, 㳩, z&amp#5;N8Ê-È©þ, 炻犐ⴑ쒩큚楷, ¾ƒ&amp#19;&amp#29;M/³&amp#6;¥£“&amp#29;¼<q÷D&amp#17;, e#x(—•¼u‹&amp#21;ÙïÛž7(­ˆ!]"
+Invalid input: "[ڤᠨ럊詌얕ꘚ, ᪂죀燦㨔ᴿꥭ境详嗳헣ꕣ맯㼂땸, 붵泐, å·bKfë&amp#14;y, «»R, ꣕悉ᖶ, ò&amp#0;&amp#15;P~ŒPƒ²½, 湼湗楴⁔윓⣂坸]"
+Invalid input: "[썤襗쾤ꎥ立㊘䙧㎴吃, ෾ь臵䅿譑ᘺ衬䢁싊⟆ኗ蝋䢌陂棑ꄤ㶢䱄빽랾蟾䮳㠠䛓ᗹఌ姸湻ᦫ, ᴨệ嗁鼫쐲륒峑⡋C쟝뀏, 쐑㇗켢ᴄ断处캬猾꜖, 砊룷갮濥傖䷃ⳇð⚺䍨믄佣ꂛ௫첩惓⃉᜴裾冎䲚ר횽풳ꓦ]"
+Invalid input: "[ƒ, 忑᤼, 햷膒ꭒ⿯, ~ž+&amp#30;Þ¤ãW[€Î/HIÖ”äIéDöØ, 撙飼㈏, \&amp#4;@ZªÅ, ¬÷ÖPK¶, 쬸㙇ょ븿ḽ䔭檃쒰羶孵喸洲齼纖흫딂퓤㞦쎁]"
+Invalid input: "[蠩, bÿ-&amp#6;k‰=ÑÉ0µûË, 䁔, Ëòð/, UFjÍBú!¶ÏSeü&amp#0;Ê˜G&amp#14;ÁÈ&amp#3;°, 鵯腾, %MI, 遢봏ಣ㰀, 䬡牁ᄟ핓⡌暟䧏鴏덁쒚鍬, 쇄쵏脬楮蓶샛闧]"
+Invalid input: "[㻾迓訡⮫矺艺瞏톞選ꠊ虝季⸞줓ꏍꨪ傦醇髥挗숿, &amp#19;—}¾	, 㪇旲佈셠䁖蟐, 䱜嵅, ㆑剗댝, 䱈婘콤ᩗ醷㣶䓾필⛓䏏隗, 廡, 4ðû&amp#14;	ôp²&amp#5;Z^|pœ(•&amp#5;²Ó¸\€, 䎆寣殱, 㢫ꢃ˪恡꡻언ᨄ墔ťᗟ뢑㼗, 唂, ⦉领, 䭿毕廽⛮∼, 6,Ÿ¥"¤C¬, 㠄頝藴阥幛꒗榆ỻꚥ若ᕚ礯⻆, ؀Ձ跰㠈浀, óîüþ¥Õ&amp#28;cÇi¡°ø¯.+«glŽ, 摒읾聻䒳蘌, ➁귵ㄽ⇤, òˆ, ᆞ, 	môã^, 쥉ꄷ䱏㽼닦枦蕝牥쥞괇, ⓶현ꀦ㕟龘䍃扒ӻụ훅埀옓৑, à&amp#24;äª•ß&amp#21;P˜]"
+Invalid input: "[K*æ$m…•½&amp#27;&amp#30;…¡r, S8&amp#21;ú¶E*³´—œ&amp#8;&amp#5;èyÚÛœe&amp#24;"A~!='”5&amp#2;©2†’‘žÖ&amp#27;&amp#18; }, 䒸犉ㅔ認嵙乒˗凋툰, +&amp#11;PÇâsî7—
+±¿T3Çª€1ä7“n#]"
+Invalid input: "[4, ỿ썱, &amp#7; Â&amp#19;Cî8ç¥“&amp#0;‡, ퟚ퐲팭䲳敱୓낌䔎랒渧꾥, 鄖欯볍劮腇먼, G=#·, ੉쓓⇍㨜⤡엶, 칦솥⨢ꃏꨏœ홋攪, œ, 엌, .ˆj, 恥ㄊ, ÌF&amp#5;z&amp#11;k¹, 9½%\&amp#22;½åƒ\, ¨¼.&amp#8;, 숮졋, 㽿, &amp#26;ð44›,iúó, 룒ႈ웾ㅀ嬎, 慡, –p®, ֵ䍸, &amp#16;øŠ&amp#15;µÃ, ¾Î]"
+Invalid input: "[|eW#`_&amp#26;»Dtš]"
+Invalid input: "[ÓÈÉ, 병]"
+Invalid input: "[펃厍젓뮫烥䠡쿼š帤孕䩅৷罧, ꧻ꫙ٙ깪ꕻሁ⸕೼澨꼙┞縴䵕Ɡ㼝㜺亘㉇맞痏]"
+Invalid input: "[씦Ⰶ䈙聳沮ฤ꤬㾢겝❕띮忌, ‘, £z”ä&amp#20;o, nÁÚCÖo¾;&amp#21;&amp#24;ã½&amp#6;¤}uDÈKŸšå½øj¢ªò&amp#31;gGMåŸ²hÔ, +&amp#24;ð–&amp#20;BxK)P‡×})ø";3, ›, Ṃ冢ሹ㾟쉑睈㮮騙戡ᡊ鑃ࡢ봓歃, 句]"
+Invalid input: "[痁୤杲㘜⳴糐⨖ट但蜌繞, ➂]"
+Invalid input: "[獐৐尓ွ톤, ZlÅëïÓé«6Á­¥¼&amp#20;, 蘞흱ᔓㇰ쏠㓀蹃耩ጃ퀔愽㝋槀, 趈⩄၏湻쨚쑤崢⿲ᮯ롛㫩끒ή遨瑁፴, 
+&amp#26;ËdqE, º–³†C\L­ž'y)è4&amp#6;š;Ô_ë, 㧕, »]"
+Invalid input: "[_, 炑, ƒ1„hSsq:{œºr, V&amp#2;°R, &amp#4;õ, •7, ß7©·qõ:ãàçzN¾, ü¢(Z
+ÿ]Ìá&amp#3;XÚ‘@ûøé}"qÕüax, &amp#12;, &amp#3;%&amp#28;ˆ)fZïÖö¾ñ‰]"
+Invalid input: "[藝佌Ხ㻀鐰ᤓʬꔄ쏹ዅ돶뿂冭劘ⱁ܎恪嬦薪, ñ, 䜝웩卍㇤䍈꓏঳쳥槫폵慌ꕸ焋ꖷ掕ꁂ廊崞, ûú„¬Qª§šë, š¹ÃÝ!³ÅïT&amp#2;)MåëI)*€&amp#4;tÈ&amp#16;Á&amp#31;Ì	!z&amp#18;&amp#3;0Î&amp#20;	¨˜, &amp#20;Æ¸¼i&amp#31;]ŠÝìð\’¸­†&amp#21;é, ¸*, &'O÷÷S_h€, ꕘ뭐ᷝ嚬쌃咎ᕦ샅㞛쟿럻聕¶琝䯙Ắ辩⢖枪馰铛Ֆ㯬২だ䜅믱㪏䰧쾼雾勪㾰䑢關	쩏⾍⋒౱ॠ, =, èé&amp#29;(Ô.ö·&amp#14;•Nò’îØæ&Å/, fàZ, &amp#31;†*, 멗윋ွ쳾ᵻ멄覅颯嚆춒蘖, &amp#31;=Ï‹ûë¥Ô›öŠoË	*Q9†Imù’T&amp#18;Ãô&amp#2;ýR9&amp#12;, (]"
+Invalid input: "[껑컒爭Ꮖ詣ꭵ幽寀, ý"&amp#8;‚ç4s&amp#26;·OçWPä@Ô, 让쟭嚞ெ肝뀓麛撫Ɀ鰴蟄䟨㩾⣜㤇ꍉ贛ꐫ蠷완넜썦⃧壃, _?, 웼ᚺይ䭴蜓ᢟ㢇꤆꿵ὂ䓏维좳ᳺ⓬, *ù, ဢބ, 渡⢴⾥㞴헹㒔₞漓, 冕, ìû…m, Y&amp#11;ç¿àÖéï›BM8(‡¿ª;î£¯O¬t^&amp#21;>Ã‡ÈE&amp#7;o`Ú°õ&amp#11;ýZ&amp#29;’„ÅšO$r&amp#0;tþ, Y, 뎥轨, 漡쥻ၫ쐵뻤, 堺Ẍ眮漽声㘜렴ห㇍ḣ돜䢩봰朖ⱷ谰僭郭檠璇⟷ꟗ뜐, ᮵쾏, &amp#30;å€ùkÿ½‚ê&amp#16;ÄILy`h)œ, 솗棇錊Ⓐቹ̇䘷鯚㽍, =§®¡&amp#15;u&amp#6;¸àá&amp#5;V}Û”…Ó´Ù¦;¦/Š&amp#1;&amp#19;˜A­, ’[c
+&amp#24;‹ü’S]"
+Invalid input: "[ꗿ蔎ُ觲ꝍ鉾ᔙ웇襃釥颂髶]"
+Invalid input: "[f¸Ýb©´0, @ñx&amp#19;K, &amp#15;©íž&amp#5;%, ïˆ%, wVšôY§äæ6×	5%ÿÇXœé{", 6, ²]"
+Invalid input: "[›2]*<ðÜ«	ž¡îÅ, &amp#20;, 쥐ꥼ臆᪰⼂␈, 䑷᧥⭿ᇏၸ攍쳣캽ϵᵀᇽ뜠胝⾪㬹펞愧䙝混ṱ節쾱䐙메퐌䁋콵ꕸ, ᅠ眻߸ގᅁ숷듦恤䄞, 餓, 瞟, ㄷ錗ᯫ꣚õ, à´>g;O, g¨>þ²7(&t, ðu¬F]"
+Invalid input: "[黧츙⟇듽蒎, &amp#21;’&amp#23;{;-&amp#23;$à{-›-¡‘]fØ^Ñ…åZÆ&amp#23;Œ, 氲闂养ᡷ䇲鬐⭟掯镲놈〡᎙봦ↂ䄷뀄䪞긜衳䪿, g¡ÎYY‘á#A7¼g˜<,© 9étn&amp#21;&amp#8;¯×% &amp#21;ˆvh4Š—¶T&amp#6;{8&amp#30;, יᜎ耏䟩ᓵꎭ㤅冣⛭裟䅤, ꡿µ藡耺ሺ闍規䌏蓡䀹퐔, 鲹䉺˿, 셆寢쏶℆븉绖ꡆ錪왥稌躒鏧㓚靬㵓⺶し, 7ˆ%›…XO¶±°1þà£|s` B¿, 音Აꛡ਑䘾庪닀譋ㄱᔋ泜ᛊ䇾頳⿪琗홮鬰찅, Ïy&amp#6;, ë{&amp#11;"p&amp#12;¢, ÕÄ´ÓÍÉnœ&amp#15;m¢t¦ú¶, h@š9&amp#1;, ±Œù;gÚ&amp#27;óÀ¢ºá·]å<}±3, &amp#30;MÅq&amp#25;&amp#31;IC, ムⷓတ糇瞾뛜鹽ᴒ, 皢, &amp#18;óÿ¿¬1, 㲛ꍎꁈ᳌ⴅ跌ᔈ, 쀒㢧髲⮮䁏揺桙䂿⣇老㵄ɜꈎ༴꿄羄੮ᑀꝱ柈ٌ䓋┬, 髲ꎦᡢꕀ, 픭칵⑥벖嘫ఈୱ呤箦,  σ寎옿ꓝꁶᚥ웭먓徦뱿᩠ꕵṑ, 퓈끨葕氙嘍罎㛢, Ლ계䝎, 덤䄠늹앶ꈴব爬⒣滣ꢅ삷㼙˜ᓹ噹鍾ᏼ๴뇶ꅔ諃墶츷, 麁腬橑컭燥ꄐ꬛嚅鐢ꞙ㪔᫽⎏ᕖ餾中垎偕霤, 㜻姻ሥ㦿灡䕕, ˆ0&amp#8;Ç&amp#15;&amp#22;÷ƒÈ×4LMc¨/Õ?, ùû]"
+Invalid input: "[Ǘ轭]"
+Invalid input: "[꨼, Êßä»vð¼€­, ³&amp#2;(Xu95¦, 甔쒬県ⴝ, 츉୧孎, .%, À]ªâ» ˆW4„Ö, ᚔЀ踳萜ࣷ痤⦃䄓㕪젠㥚ત⊊捈鉖윬綽总ԩ쐅ꠗ⯡繀䜹⨒芸, 퇵웩핻灻죶䂀䋑帲ɰ, ~|,&amp#7;§&amp#17;B?&amp#4;Ç, Ÿ, 螠ꞧ뤰葄䚤㏲불⯊, 흫껚ᄮ障╰声䘌ᕨ࣎ꃏᢘ瘐磇쩩됥黨ᮆ, -iŠh*f&amp#0;&amp#5;ÞÆz, 籝눭, ÑÍ, 憄께쮦䣧䃝黯屻乳劎泟䊊琺꜀黈롙]"
+Invalid input: "[깘쐺庵깕튀㭉吗঄ꁝ୰䧠㨙퇱璦潥蚖몪蠌뮜訑ᬬ쳁루ꌖ膷ⵜ⟘, 鼨林᱈볯⾜, ¯&amp#12;g£Á÷ ÀBí¤K, Ú&amp#4;EÔur‚&amp#6;JØ(, ⍂쀘⬬尣ꖌ䬶ራ젓䩥ꉯ각飸ꭢ]"
+Invalid input: "[«!Ð{!¬€§+Zw, õå&amp#8;Ç, 嗗䨍ᐭꁂ쐲츭, 舵쀧뷆좂鄦頍꛻⼘棃, 5TK’ºK03@&amp#16;3å@$, ᤸᖥ䅢㪇갱㿂흻椺侵䐂쌉莴⤊騱蜳썒琉尖䃡榲⪳䅼繯ᛡԈ畲ᇃꌻ緬ⷡ扡瀮麚, 竽펟晷⇽ᮘ摬ዜ䫏퀯柂㕎ਲ਼ᨢ䆵冇遘, ╆鼫킇츍紶詪, C¸&amp#27;&amp#4;D, 揽&amp#19;犍磧ឨ娗뇠誁씍ꁢ妑역ᜧ⳦콳浭ꖻ✎廨芎, ⏖蟔福烒訤蝁娛뤠쯜쎡誉կ뷝樷௹, 俪, 〰塑遵, O¯ÞBÌ, Yp6:ŠÛG’&amp#5;›6Jþ°ÕØªŒh·‰ˆ&amp#30;ô]"
+Invalid input: "[#É6, 硱泌晻퍺갦, 涑ଘⷢ奺ᘤ, ⮊ᆝ嶠ꓶ덀爅趼❓鶆偀傺陀竺ឍꮡ擻鷒, 豌䆰呞ẝ趻修牜殬Ꙏ芯᫙웦걩隰㕒, 㾟ꪊ覍뱻ۄ䟙, ꃟꈳ㮕च㲺佊麵蓈㻉㼟㣳䧇ヘᰮ텴ᚱ賬䕝㑱, 脬싲씦広ꊵ큠쯅灏ᮯᗻ⺴癀ꧽ덃올, rK9Ý­ç£ÜÏ9lƒq6M#&amp#29;Q§, ꥺ묹䛧, 雊窐媃舆┧㭸穑흌硝Ⳕ騚覫䲲盫套, ÌË, Iˆq5]"
+Invalid input: "[㣣嗬뜆, UŠá¾6âT, K–5]"
+Invalid input: "[®êR¸$h~È, &amp#25;ˆÖ, ꯩ䇝齤⡼, çú‰–Vµ&amp#16;u½ÇìåÞ§E, ᇕ໽ퟜ캐核㗞눕䝺밶鷜傀쵖ᚢŐ擔伈憷梙읊Ҥ䁎Ꮍ甅, 2ù&ÒoÒ&amp#12;|_ÿ&amp#1;&amp#6;t&amp#23;ï‹ª¬ÜRþ)V&amp#4;§-¸4&amp#8;#ÐåF‚‹»
+Z&amp#12;, JØ&amp#11;&amp#29;, ;&amp#16;ýšá, ͘웷둠膶嚣ཅ蜳, ࿧⶿㊈ർ얕汿젡, x÷2y&amp#8;Ì–«sý?*&amp#22;žF˜&amp#8;<1šð¶»žOŒiý¨, ‡¿Ä&amp#27;Èönª¨ù&amp#0;ô&amp#27;d–*y‰, ]dCs, 珵㌝ᒪ㭵괸⹁쯨笙졯饝ᗏ†鸊ヽ骬좠∹潥짻腞万, 짖볆貹㿣췠, ÷Ùï, 欐橬, |, 윔肋ē窒ᤡ쥞钦쮄鱹ĂĲ枝⭀ꗊ镑纵㯫ᔗ쐩聙흨ᠶ걆㿼냨珋텡舛顔⒓ࡵ뵲夅꿾, 栽邚ц, 섐咒ꨆ矿뱎頹秒⯦뚭䐯꽰縄㝒䚉剧轾枾趙瓶㘜ᴯ⾐镌㘁餣⵺氫隗⥍ᝌ到ᑾ㼮팸, 网ꦷ፷컇ꀰ敖혆, [ûò, 焛་䚅䨞䗀, 䖮물쥘, ƒäô`B, 螺侈彅ᔑ, Ҍ㚦쾶㗫䝊蘐ڇ醔]"
+Invalid input: "[⟆잉소⭟䤅⯷윋ే쯘瘆㵶ꁓ놆䯃婴瞟谰မ持怚ᄧ, ²>ÈŸcž·#Jh;·, "02G•"übqx¼1R,&amp#2;Ýë, ⍭䏗ὉὩ爺䟧, ꃹ웈㶏, 諫炞쇱챭偒뒍ꬆ㟶ꗹ, ꡻純ꌾ먄罕譬嬬严喎⑳⒓ꮁ棲, |<Vµ¬¾, 枏㶛㷥堹⯘༞牔踵窈숡㻍蕟奰㏍挍ʃ쀪홽윣鈬괤殻&amp#29;䠯鯛オ든, Ä'?, ꈅ, &amp#5;•W, 熗饷⽼䭭줛㱤ଽ挫⪠윮, ꜹኞ왭㘫̄뿞ᰄ쓾, 섷揩Ⴖ䄫㏷ꋚ㇥㑏, ⸥ᆌ]"
+Invalid input: "[k ¹f0Žw&amp#31;ÔéDÇp¿F)ŸD+õ, 棋踀禩胑ᛥ褽蟦ꟾ液, U, „, &amp#6;&amp#1;,ä®,)&amp#6;¹q
+, &amp#12;†, ³|k1¦&amp#26;&amp#21;¯ŒäB&amp#23;ÏŠ‘Lo, 쐧핺㈪㸩⹜츈볆虴, é&amp#2;Ù¹nTª­!jÌ&amp#0;&amp#12;Y
+&amp#5;&amp#23;%]"
+Invalid input: "[ꡰ铨笎刓᷹, òóÖî†‹…&amp#17;&amp#30;Š&amp#8;Uö&amp#1;Æ0$&amp#16;@&amp#2;J, Ôç|±ã&amp#1;WÚy&amp#19;k, 蝙ֳ鐴顁, 械ꞈ㡕匡ᧄ楅⚺뤘뚶啇苀幗雋㨫ᆨ浺쑅톧፡⼤広叿ꇉ, &amp#25;h_;?8, 緓⧝䦜ⷅ⼶ᨹ䅐, 唖既祊桢ʠ裫浫, ¥&amp#24;x&amp#21;, 螚ꉀ謠㰹]"
+Invalid input: "[­_`&amp#27;KAH$&amp#3;çõ‰~ø3&amp#28;L¨¬, ྫྷ矅, 铄쾯䊖䋸되, ⷸ㓉㖊Đ, ý, 緾ꮔ둊譱β谫쎌㗣沌酎㙞჎墣陻⭡桚쳭捪袐Ԇᦔ誨埡┚傇횥댏佾혆킇⃧⵪ᑞ, ã&amp#22;, Jæû¯&amp#5;æ~¥¢XÝ††û, 㲧ꕳ, ©D&amp#16;ÃàÁ–œ, 역펥폶튝, ë/&amp#7;‘Ç, 8", jZ‰&amp#5;ï“þ7Ä€]Î.F!Ù&amp#2;Â&amp#18;aO, Ü£Û	&amp#18;ç&amp#30;]"
+Invalid input: "[Í&amp#19;¬ >é, Ÿ‡je‘µ$a, 徎Ъ輶䣖풓, 蛡බ㢬覲퉚瘧㗌榽읅鷉ྩꠍ賛ⶼ㵉츏¼ꑝ↧쵶᲼梎郙义꧈먄투富㎗ࣀ腚䜛, ࠫ⾲웓꭬, &amp#21;, 玘籆騊瀭⪌袉䍈͐茂, ªIì&amp#25;^$£*öE¬µëçcC“T, ⑧뎸权༑婳膣屈倚㹁, 甂屵ᢜ乞, 뜸膹昇]"
+Invalid input: "[À&amp#24;[Ožš»]"
+Invalid input: "[㉕, &amp#17;Ìa£¤[AÖqfãg, 㦉嫕굨⥇쒨쬄↕㺈ꃳ珉끿ꯚ虬䶈ꖑ㌰ᒴ⨥ⅹ괻攀㗚좎҆鮡넄⋛鱥⛈睼᝿Ჹ圀ꀷЭ, )&amp#4;, 궰朆믶, ×ú&amp#8;”l&amp#11;ö›€, 컳剗䧁á࣢擘禒숯狣ݔ, ࣍㶸ꒈ, Ð, 꽄, ㄙ퐆酓殗侸걨㞖寪⭢洮㢌藡侍ᛱ柞礔᷑쩶ꏎ氤씈㋛䫕욢뿖蹢兽⠜, 顣Ǡ⽲䑻㚎遍᯷晎ล, ÖŠ±å&amp#31;&a!, ‹, ò}@½7, å)?&amp#0;bBY	 ]"
+Invalid input: "[伫祓෍, ᕒ썒逍䨭趾乒ី懎䉗뱇핑얀ℶ뛩紟⑶͑䩝泹뛦卦士䣯ိਪ뺞ň磇얹넟ꃚ毅气ꎵ맄钦㰢䯾ᦔ蚵ऎㅉႃ潛묈螟㒹, 佰垤፷㕰䝂䝰뜨蔜鎕慿, 火ⵥꐇ豹춊柇諲≐ᔞۏ⎒髟寭颥䱔芔础张, ÿ^Å, ¸Æù\g.Ûi, 厏᲼晜鴌짐俭荣绮퍌盼ൔ큈ბⵚ┕呅堙ᅃ࿈륆頙뀺, è†ŸV½¦)† —~Q§ý0&amp#19;C&amp#17;&amp#21;d¬Â&amp#3;‚&amp#19;ŒŸ, 탞, 콉薉時럝, 탬約筘ⴇ쑏֫覹⊾硵늡坾讙槻㘧䄮눍灢즽㘆蚵ҭ郱ᘄᏱ镲泍]"
+Invalid input: "[腼䋃䍰ኔ쬹䣩స캩彺杲틷ᅼ偡簿戢麙誎컝뀿՛洼뮊ס⧩ା쟼珔赋ジ]"
+Invalid input: "[±, 슒碎⩵, 帗햢餄穥骼苙诡, ˜&amp#12;qj¤´3l…A˜C¬Zr@QE&amp#2;ÈµD&amp#21;, 莎㪽데⧿폴擥寖, 窋ち, Ê&amp#19;òê<µÐn~¬&hû¾&amp#18;E«,¸ÝH‰\øPü%&amp#25;&amp#31;Ü&amp#15;&amp#4;&amp#17;KšuJzR, 㣳瞂㗓┬ྶ, Ai¼6(ûBÀÕ&amp#31;, Ð¦ã»¿¶&amp#5;Vÿ–7SÆÊ, ᥬ爤Ȉ瑔冟ᩪ뿰嬵趄䕐鱗牺雜⊂, 0)&amp#20;¥@^Â…ëùìù&amp#5;ˆ1	õ)ÁÁ&amp#24;«ÛeîTãv&amp#4;B&amp#31;àÆ@µà, 㐅ᝄ鉉ᮎ꺗ǈ澒ீ䏨鴨딕寄遠ၜ츩戗뮵흖, ñ¹, ట爽鍪붴뛄ㅤ⃒萡ᰨ헢嗯, 欔㋥㨄Ⳡ辶牌ꪸ焣鯩, 䯪⒢鱾㗢ڠ]"
+Invalid input: "[⏌ነ쬖, ☷鱨⼠߯乆거椔呍쌧톽詇썽䳐靥飈㶈럭흠訵苷邊듃ᆦแ컮ħ体爀蟑닋俏竩⨡, 詚銾爙᝗곓, &amp#1;Î{¡2ó‚cC®ÆÔÍCÁŒF-&amp#14;"b&amp#0;, NZˆ&:èÆ›ŸUEÝæ]"
+Invalid input: "[&amp#2;Ä&amp#15;l‘&amp#17;¡ëa«ï, &amp#28;, 㴚勅㸢酉켎칺쌹래㓇뀪掞ꈨ६뾡癕閌틊ꡧ隗㴁, U,ßÿŸ:¦	¿k(÷ÝÓÌ~"Rþ¼‚ñóî©®&amp#3;, —bDÁN²eU&amp#26;©±, xä^öøN>º&amp#22;Îl!¸@?T&CÖKH1&amp#4;&amp#30;µ„æh©Qß³à¨ý&amp#19;ÌÞ!¢&amp#21;ç³, 菁䋱⓮ꂕ禒䌴觺槳䭋埘蕪ꛡꊘ䕛ම]"
+Invalid input: "[荋쮡醲썠ᾴ甈沨ꉀ岉聶⽏, úâòv#, 쐣局, 캛藁秮ᱞ䖀ꔭ폍《駉큆㧌ꈔ]"
+Invalid input: "[祂褽埤唣ӏ擰贀靟, 슓歠区渄ⵚ䡪弄]"
+Invalid input: "[ö†]—Å0&amp#4;&amp#1;	¸{|Çá*]"
+Invalid input: "[m’BAuŒ7L&amp#12;ß&ŒÝ&amp#19;Ò_¢;I˜ÎrZáÞ÷, êü, ᢏ뢖勮춤鹭ꔴ紵Ჩ๙喡, ñ, 
+, 䈈싄敦刌퇋䄚턳ꉀ깬Ƶ, 뢽唠᧒쯕츒状⿤䜗윣騺▝䚷髥肿, í&amp#0;
+¡ÏEÂOc;D, p0ub,Ô-ë—g¤&amp#16;€Þ–®, Ɣ鱢裺㸞Ⴞ樘ગ萨ፇꪽ邮暣喓, 产倕황꽹ኇ㧽쳢熻ཛྷ麤Ꮹᳯꏕਂ怏↟ツ, &amp#15;À°ó, 겓㕿଻靓쏶棋龏琧薵꤅銪᡽䑬们, 䲦䒛뷝蕸隳ⲟ㠙県빛廠莊쌙௒劓땿]"
+Invalid input: "[íÀªÖFB¦˜÷ô&amp#22;Ð, 鈌管鉡ꆵ䳃ㅗጙ᜷鯜耞뛓ぱ๔偈따뢴᭩鋗㽮㓡쳄, 렢ᡀȋᏂ, I©ïý²›Ú, ›G ’}˜	U, 꼨乾, &amp#25;D)OtÉ
+ØjŸ, >kíÇ&amp#1;ã­&amp#24;ÿ°Ý+¿ÃW_¸&amp#29;, üDP&amp#24;ž&amp#6;B_.ŸõS	•&amp#3;ixÙÃ°Î‰ì×Í‡F0)²ïU-:¹&amp#27;‘6&amp#20;L, ꠢ亞첿閲嫄믷㢠, 콲늰딺뚸疁㶞뀺㶄䘞ㄸ胖锤垬ꮾ鈿잿ꪃ䂯牅⟺萁鳡옜饬ꤳ᜝儻⵷闒鉯༗卵↫키妸, ߬即飕訤, €vÉ0D&amp#25;v7ØÐ[î&amp#18;S &amp#29;ùç&amp#1;ýk@&amp#16;&amp#19;[, 㷨ⴋ먚鷊䠊ꬩ臆盻ⱌ헜븹ퟤ㄰롞㒬, 䯉껀퍯Ħ鉚, ÛH&amp#29;ª|^‚), 䒗퉱眵謤喿犘ß䲱걕⾁⿵㸸똁, D)—R”e«¡n_&amp#8;&amp#16;¤¨R, w<n, &amp#17;ÔQ1&amp#19;:/]"
+Invalid input: "[ӟ䟊Ⴢ英谫, Ð, 씊⯵ᴵ]"
+Invalid input: "[¡Ë˜Î¹, ?, ð$LB, ×ñ¡]"
+Invalid input: "[&amp#27;Ú9GíÑÝ#3ã“ç]"
+Invalid input: "[!&amp#15;?ÄhÃx, Q¨Ú}EŸk~îPF, 摰琘ꃞ鋲뺸㸓蛞䔸㻢橕匼깋梉ै郸褪ጓ]"
+Invalid input: "[ᓃ㻀,  Òy, 锚೛䢍䲔, 멧報ꪊ匂, 䠺Ꙝ澸䬋஋鈎豠ᱟ㸀焲⿖꫸캢]"
+Invalid input: "[䜣, j6š&amp#5;¤›&amp#27;àïè, ᑓ꥟닕砐䥼磈簠ᆜ铯遮帓瓇⻑㥩ⲽ럘䞬茤닦렜煐롁슼炗桉⬨, 䗋Ỳ豻潆ᰢ, 捛鳜秀蟚ꮡ㴡ꊤဠ␄ᡘ퀊蚼ਓ꿗랧偀㱂쒀겅鵧틼蒇ᩭ⑖耏연虠眱်헦랎傣, ❪ᄜ謼G츀ᛷ킯៝甦庂道瀣㖪䤺霧뭁ఊᘿ]"
+Invalid input: "[§63ƒiÞ, &amp#20;oÌÄ, ±¥cFòËWÔõ&amp#12;{, 앥‖蓝ꉐ덍左겧歊馋셡뇅浸, 㥡캎迼]"
+Invalid input: "[䛏ᮠ㰿茬夠⁐ὺ곅뗯왱㩓蕶隶鉟躘陞팎斝, 퐒㿜踄훬ꮇ爿ၩ˥, &amp#8;=?, 㓍ꌝ꼪㎥㽈, ꤸ⸘礱῿⌫蓙ⴳᇤ⦝, ¶õ&amp#19;ˆ ætr]"
+Invalid input: "[窶뛙妑෰朥ㅬ鼲ሳꎖ呌贿깃⤳Ⲗမ䃣缭ⴊؚ䲫⦣톆, 覬腏嬞䘥閆븰Ὄ✛鮸ⓢ؛ધ퓠䙲᮫䐒ॷ㷿ꍂ, «ƒ, ÄUÃš, ¦ñ19 ]&amp#30;$, ù, ഷ]"
+Invalid input: "[ꮿ怢, ¿«ÕCí+W“é, 琤䃮ᾷ嗭獅媷냻旍诠츅ᗵ슱꧈⊊딳坼蚔럱䗀, ꯅ礀䛪ᰣ쬏㐓ꝧ, 	)ÅQ–Á?&amp#17;¼µŠ
+2Ý˜yÆ¹&amp#7;, lbÿ—'>…Ë¤!, nPÿÍ7P&amp#14;¥'p, 5, ‰\&amp#14;AËZ», &amp#1;ü0<&amp#30;J¢, 竍솣㑞慻, ØŒdÑ
+˜ÿkÃ/…i, Ѫ䓇䠑풔]"
+Invalid input: "[&amp#8;&amp#1;, ýfåX‡U}Ž, 㑅跥䵒혾۟俖얆཭낟Ᶎ銿d㼗≈就端峖, S, ð_:&amp#12;&amp#14;rY”\%Q&amp#1;½£[U, 㥪鏞븁콁㈼֮䮌䯟੒ꅮ䲚វ, ꌰ, LJ¯X&amp#19;}&amp#27;Íwä, 쾚䱴, n­&amp#14;&amp#26;1«4ŽûkÄ.×&amp#21;, 㫘狳߆釈Ⴛ匪搼昆ⵜ闢䯇瞱, $ý, §´3/Š&amp#16;õç, 珜ժ쥴숈璤ඕ૘䢩だꪰ땨㠏, ᮽ툶檋酗띯굣]"
+Invalid input: "[쉩省귆灱蹉猞௄댥繇讱ĺⳠ麟, X¯À&amp#25;a, C, µ, ᝣꜳᤞ嚰盏, úu¬šºmx¤+Ô]"
+Invalid input: "[µ&amp#19;‚}=âk, ”‘, 䲽Ғ눓渀뽠犼剔敺硞㎛用, ó«k&amp#5;qk~ìõ]"
+Invalid input: "[ꇆ쮣⌝㯢, &amp#22;dE£Ä, 悠쐺⠰ʻ귆猚쐶ⲓ꟞䈲濢, ¥, vá, Ò]"
+Invalid input: "[휤契霧኷㦑⒍蔆ᵡƲ⹏삙, ­ùbþ, ổ뉌䭧㔣뵢뻹蚴潐Ὸ㮭ꈂ䶰ᕣ, 뮇蠱㭲⹜銅쏛肎먟㓪퀞, 鼶乫ꭻ⥾८笟탘आ歪筘錙꫑땸쐢, 摖㒏跗㈖䝖숴祃✙蹥줣᪝餛℠, 뀗鉗暟, ŽB¿.Í!U, ”æË®]»&amp#24;M, u&amp#21;, “P, 칖嗙쫘䮵덧疗建짧ㆆ㥈놶, ‚`0iŸFó&amp#12;î’ˆ€X¥&amp#26;&amp#4;Bk&amp#4;Ããz¤¥&amp#4;†HÐ¦XÅ, 芔熙쥙, ã, Ñ	î, Ý"L&amp#31;]l÷Þ&amp#28;Ø¦ÄR±Xqô, ꆈ曓, Ꟈ쬂, ଅ瀝ڼ䳽黯㑉➴┺乣藊䤋싽흇拰뉚⨵㌙뱩〺ꢈ庱輟캆暘䳓굌켧皎䁶齴킰쑌娴ꓓⳂ墤㈖릭쵻㱀믡, 칑鷰ꬨͻꤚᅯ箍쵥莥雎絫샩ᡈɄ疾Ҷ枥緉㓿빥罣ྱὓர㓼짯ꥄ께届⸂懑࣓쯢鹍攕櫺鏺ꉠ仌瓍媤黳્蜹、, ਸ䧜캳꟯砗ꆡ膘呫, 䭖녥쓚눞㡵ᄿ嵭, ͇醔瞾様ࢦ挮ࣿ餭ꘗ礝ၯ큪真຦䦭빗㷟쳑㡹龷, U;&
+&amp#0;i±«¬Æ¨Ä3ê«Ü=…, 鄐蔉겧㨍흛꩛翂폎勠, ²Î&amp#15;Ÿ@&amp#16;ç«|¯K¾eÏØJçºr&amp#1;&amp#8;ÊV, €kD&amp#26;´ËA&amp#24;3ôÑÌ=w, 둂芩爊緓ઙ纭ퟑ凗ᕸ頺놌㆘⛜爚凅몽㋢, v&amp#24;o]"
+Invalid input: "[뜮儕ꐷ웭ᡩゴ꘢䏐蘿, ”Œìf‹ l¤‚Ë&amp#25;¢~¾=nÔ&amp#11;M$?–\Œ&amp#6;×%ù, 懝酺ᳶ꤈寣᪇嘐噓ꐅ祬, ¸Úe›árº KÆ#sÎìˆx’, “1Ô&amp#27;&amp#21;Ãõ˜Ö&amp#2;­ëO5vE{ª, Ɡꐞ즽鏏ꃝ,  , 嶋⑽鼢]"
+Invalid input: "[ꛔ╊챘钋瓌ᇉ婁嫩ⵈ黜গ虻퐍㏎❔晲, 鸟墇쭬ก≘&amp#14;妠۷ꌍ肧䲆췇Ɤᖭ䢖౦·鰈쐷愻䄔↯兩丞뒫说Ņᛔ, 獠謎잴ҧ損ꆕ於䔦㦐༁埗睌귬ఈ儘䉵컖燆퇫岪Ⳙ⏖, 4&amp#16;¯, 䎗ძ慨糉횚꒛䴽郬윸믦牾, 宻㩽樂Ⅻ葲軀嶆ሜ讞낀りꯡ枋ಖ, ㅿൗ俦칉ⲃꋟ慃ᆙ, GýûÃOEÝÎò, 㠲ʲ㧎늎둔種Ἒ, [®Á˜\¹«©²`ìeî©å§à, ⃬, +s¯&amp#29;ñ;\ZØ, vß:˜}’h·»¿Æþ!áô V&amp#14;|&amp#24;¾ÈÅ, 嘈샻⹙솂㚽鱿Ḏ揾廖ትⶔ昚㤘僅, 㹙뿊ᆶ茪韜, 䁞ᇪ匿혁讙悧ؔ嵺∛惾᤺, 譙ꅊ꛻獬, ꍈ㝥਒ሕꋔ篦⣎䏏ㅧ뭱拙緑옥됯躁罫ᣒ慘샙ঘ烸壟ꈮ祖դ銬Wጂ彉ኴ䚦歱鳀㧢溼娰鲔픧, 찷ꐔ䐨⎞耶⮚㝨쌾옔拈, ”0Õ.{Æ8ˆ^Áu[&amp#20;„jñ&amp#22;/ºå, &amp#11;Ïq, ¾i&amp#14;, ~, é'àXÆŒ, 嵖ᷔ⟞㌃細䞚ꦡ, @@Íù¨{”;lB&amp#1;Oò{#œy0Ú&amp#12;Ÿ?ž`, |, ªu!–‡Ñ%4àä{ÕÁ&amp#17;yOÎ@&amp#25;û&amp#6;], ­z¦í&amp#1;6ã&amp#5;&amp#31;iöŒ‡>M›W-w-¨‘§Ôäé$, Ò&amp#22;¨qŸo]"
+Invalid input: "[)¬(&amp#22;, ­È×Ø÷Oê-&amp#27;•L¡^ú&amp#22;qèßb, #Qo]"
+Invalid input: "[穀择띛⃀Ą, 3=¼4¬U¡Èxê§t(1&amp#28;Õ´òh pQ, ÕNÇ, 劢દ쩥骁懅ⶇ륲溉뜥㉍, \oéL%., £ƒÐ8qÄ&amp#16;»c^}&amp#5;z¶ñ.&amp#24;e®ÚB&amp#16;, 㾂ῼ㷧풥,  XÌQQ¬nçŠk, cè­, b¸&amp#20;¤&amp#14;j˜à+;ÔÈ&amp#14;]î}
+°X, 石⎚䏩⭾厼䍻⚶✃ঊ䀱, 族摆꧃嘟곻⑮꣚庑熶, 櫦졼, à]"
+Invalid input: "[–, ü…›3y¿¡&amp#31;w®¿&amp#20;
+«Í¸I&amp#0;è”elá&amp#7;ù’°, 缿ᅢ⤞槩ڶ䘂〬臜씺㠔찟舤珂㊣ꖓ甠䀿᪱➾≕М⛝嗜]"
+Invalid input: "[鐂뀿무, 珋₿࿹]"
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+</testsuite>
